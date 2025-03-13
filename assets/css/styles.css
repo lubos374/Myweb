@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Reset & Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles (Mobile-First) */
+body {
+    font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #eaeaea;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Sticky Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav a {
+    margin: 5px 10px;
+    text-decoration: none;
+    color: #333333;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Accessibility: Focus Styles */
+nav a:focus {
+    outline: 2px dashed #007bff;
+}
+
+/* Sections */
+section {
+    padding: 2em 1em;
+    max-width: 800px;
+    margin: auto;
+    border-bottom: 1px solid #eee;
+}
+
+/* Images - Lazy Loading & Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Projects Grid using CSS Grid (default: single column) */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover effect for project cards */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Posts */
+.blog-post {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+/* Call-to-Action (CTA) Button */
+.button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Media Queries for Larger Screens */
+
+/* Tablets (min-width: 600px) */
+@media (min-width: 600px) {
+    nav a {
+        margin: 5px 15px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptops & Desktops (min-width: 900px) */
+@media (min-width: 900px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

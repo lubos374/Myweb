@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <meta name="description" content="My professional resume, projects, and contact information.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script defer src="assets/js/script.js"></script>
+
+  <style>
+    /* Background Animation */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0a192f] text-gray-900 dark:bg-gray-900 dark:text-white">
+
+  <!-- Navbar -->
+  <header class="p-4 shadow-md bg-gray-100 dark:bg-gray-800 relative">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">My Portfolio</h1>
+      <div class="space-x-4">
+        <a href="resume.html" class="hover:underline">Resume</a>
+        <a href="projects.html" class="hover:underline">Projects</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+      <button id="darkModeToggle" class="p-2 rounded bg-gray-200 dark:bg-gray-700">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <!-- Animated Background -->
+  <div id="particles-js"></div>
+
+</body>
+</html>
