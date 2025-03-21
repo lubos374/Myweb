@@ -14,7 +14,6 @@ I'm a customer support and technical professional leveraging Python for automati
 - Automation libraries (Selenium, PyAutoGUI)
 - Data handling (Pandas, CSV processing)
 - HTML/CSS basics
-- VS Code on M1 Mac (8GB RAM)
 
 ## 👯 I'm looking to collaborate on
 - Automation tools for support teams
